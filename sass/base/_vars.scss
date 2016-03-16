@@ -1,0 +1,32 @@
+// Color pallete
+//---------------------------------------
+
+//$color-primary: #45818e;
+$red: #F78181;
+
+$color_primary: #5ec3af;
+$color-base-font: gray;
+$color_success: #5ec3af;
+$color_failure: #F78181;
+
+// Media queries
+//---------------------------------------
+
+$mq_medium: 960px;
+
+ //@media screen and (min-width: $mq_medium) {
+
+ //}
+
+// Mixins
+//---------------------------------------
+
+%overlay {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 100%;
+	z-index: 100;
+	background: rgba(25,25,25, 0.8);
+}

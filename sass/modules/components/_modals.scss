@@ -1,0 +1,16 @@
+.modal {
+	background: black;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	&_content {
+		background: white;
+		color: black;
+		max-width: 500px;
+		margin: 3em auto;
+		padding: 3em;
+	}
+}

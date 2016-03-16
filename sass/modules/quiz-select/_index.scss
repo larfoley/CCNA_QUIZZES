@@ -1,0 +1,185 @@
+.quiz-select {
+	padding: 3em 0;
+	//width: 500px;
+	&_header {
+	  padding: 0 0 2em 0;
+	  h2 {
+	    font-size: 1.8em;
+	    margin-bottom: .2em;
+	  }
+	  hr {
+	    width: 10em;
+	    margin: 0;
+	    border: none;
+	    height: 8px;
+	    background: $color-primary;
+	    
+	  } 
+	}
+
+	&_card {
+	  box-shadow: 0 3px 3px #ccc;
+	  border-radius: 5px;
+	  padding: 1.5em;
+	  width: 100%;
+	  margin-bottom: 2em;
+	  display: inline-block;
+	  vertical-align: top;
+	  background: white;
+	  .button {
+	  	width: 100%;
+	  	@media screen and (min-width: 1400px) {
+	  		width: auto;
+	  	}
+	  }
+	  @media screen and (min-width: 900px) {
+    	width: 31%;
+    	margin-right: 3%;
+    	&:last-child {
+    		margin-right: 0;
+    	}
+  	}
+	  h2 {
+	    color: black;
+	    margin-top: 0;
+	    margin-bottom: .5em;
+	  }
+	  hr {
+	    color: #f5f5f5;
+	    background: #ccc;
+	    height: 1px;
+	    border: none;
+	  }
+	  p, td {
+	    color: gray;
+	    line-height: 1.5;
+	  }
+	  table {
+	    margin: 1.5em 0 0 0;
+	    text-align: left;
+	    th {
+	      padding: 0 1em 0 0;
+	    }
+	  }
+	}
+}
+
+.quiz-passed {
+	border: 5px solid $color-success;
+}
+
+.quiz-failed {
+	border: 5px solid $color-failure;
+}
+
+.sessions {
+	display: inline-block;
+	width: 100%;
+	max-width: 450px;
+	transition: .3s;
+	position: relative;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background: white;
+
+	&-header,
+	&-content,
+	&-footer {
+		
+	}
+
+	&-header {
+		border-bottom: 1px solid #ccc;
+		padding: 1em;
+		h2 {margin:0};
+	}
+
+	&-content {
+		padding: 2em;
+		background: #f5f5f5;
+	}
+
+	&-footer {
+		border-top: 1px solid #ccc;
+		padding: 1em;
+	}
+
+	&-overlay {
+		@extend %overlay;
+		text-align: center;
+		//display: none;
+		visibility: hidden;
+	}
+
+	&-saved-button {
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		margin-bottom: 1em;
+		background: white;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		button {
+			background: transparent;
+			outline: none;
+			border: none;
+			float: left;
+			padding: .5em 0;
+		}
+		.resumeBtn {
+			text-align: middle;
+			width: 80%;
+			
+		}
+		.deleteBtn {
+			color: #ccc;
+			float: right;
+			width: 20%;
+			background: #2e2e2e;
+			&:hover {
+				text-decoration: underline;
+				color: $red;
+			}
+		}
+	}
+
+	&-close {
+		border: none;
+		outline: none;
+		background: transparent;
+		padding: .5em;
+	}
+
+	&-delete-all {
+		border: 1px solid #ccc;
+		outline: none;
+		display: block;
+		width: 100%;
+		background: transparent;
+		padding: .7em 0;
+		border-radius: 5px;
+		&:hover {
+			background: $red;
+			color: white;
+			border-color: $red;
+		}
+	}
+
+	&-overlay {
+
+		&-show {
+			display: block;
+			visibility: visible;
+			.sessions {
+				margin-top: 3em;
+			}
+		}
+	}
+
+	&-close {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+

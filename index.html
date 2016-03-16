@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<noscript>
+			<div class="noscript">
+				<p>
+					For full functionality of this site it is necessary to enable JavaScript.
+			 		Here are the <a href="http://www.enable-javascript.com/" target="_blank">
+			 		instructions how to enable JavaScript in your web browser</a>.
+				</p>
+			</div>
+		</noscript>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/app.css">
+		<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+
+		<header class="app_header">
+			<nav class="app_nav">
+				<div class="container">
+					<h1 class="logo">
+						<a href="index.html">CCNA QUIZES</a>
+					</h1>
+				</div>
+			</nav>
+		</header>
+		<div class="app_container">
+
+			<div class="quiz-select page hide">
+				<div class="container">
+					<!-- <section class="quiz-select_section">
+				    <div class="quiz-select_header">
+				      <h2>ICND 1</h2>
+				      <hr />
+				    </div>
+				    <div class="quiz-select-cards icnd1">
+				    </div>
+			  	</section> -->
+			  	<section class="quiz-select_section">
+				    <div class="quiz-select_header">
+				      <h2>ICND 2</h2>
+				      <hr />
+				    </div>
+				    <div class="quiz-select-cards icnd2">
+				    </div>
+			  	</section>
+				</div>
+			</div>
+
+			<div class="quiz-ui page hide">
+				<header class="quiz-ui_header">
+					<div class="container cf">
+						<div class="quiz-menu cf">
+								<button class="quiz-menu-button button">
+									<img src="img/menu.png">MENU
+								</button>
+					      <div class="quiz-controls hide">
+					        <button class="button" id="save">SAVE</button>
+					        <button class="button" id="pause">PAUSE</button>
+					        <button class="button" id="quit">QUIT</button>
+					      </div>
+				    	</div>
+				    </div>
+					</header>
+					<div class="container">
+						<div class="question">
+							<p class="timer"></p>
+							<h3 class="question-num quiz-data"></h3>
+							<p class="question-text quiz-data"></p>
+							<div class="question-img quiz-data"></div>
+						</div>
+						<ul class="choices quiz-data"></ul>
+						<div class="answer_result quiz-data">
+							<div class="correct-answers quiz-data">
+							</div>
+						</div>
+						<div class="submitButtons quiz-data"></div>
+					</div>
+				</div>
+
+			<div class="quiz-results page hide">
+				<div class="container">
+					<div class="results">
+						<h2 class="result"></h2>
+						<div class="stats">
+							<table>
+								<tbody>
+									<tr>
+										<th>Score</th>
+										<td class="stats_score results-data"></td>
+									</tr>
+									<tr>
+										<th>Required Score</th>
+										<td class="stats_required-score results-data"></td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="results_buttons button-group results-data"></div>
+						</div>
+						<div class="wrong-answers results-data">
+						<div>
+					</div>
+				</div>
+			</div>
+
+			<!-- <footer class="app-footer cf">
+				<form class="donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="G5826DBJR54SS">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
+			</footer> -->
+
+		</div>
+		<script src="app/helpers.js"></script>
+		<script src="app/question.js"></script>
+		<script src="app/app.js"></script>
+		<script src="app/quiz.js"></script>
+		<script src="app/quizzes.js"></script>
+		<script src="app/onload.js"></script>
+	</body>
+</html>

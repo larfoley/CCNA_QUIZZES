@@ -31,6 +31,10 @@ var Quiz = function(name, id, description, questions, time, section) {
   }(this));
 }
 
+//------------------------------------------
+// APP PAGES
+//------------------------------------------
+
 Quiz.prototype.pages = {
   all: document.querySelectorAll('.page'),
   show: function(page) {
@@ -43,8 +47,11 @@ Quiz.prototype.pages = {
     allPages[page].style.display = "block";
   }
 }
+
+//------------------------------------------
 // START QUIZ
 //------------------------------------------
+
 Quiz.prototype.start = function() {
   console.log("Starting Quiz...");
   this.setDefault();
@@ -56,16 +63,22 @@ Quiz.prototype.start = function() {
   this.timer("start", this.time);
   this.activateControls();
 }
+
+//------------------------------------------
 // STOP QUIZ
 //------------------------------------------
+
 Quiz.prototype.stop = function() {
   this.setDefault();
   clearHTML(".results-data");
   clearHTML(".quiz-data");
   //this.clearTimer();
 }
+
+//------------------------------------------
 // SAVE QUIZ
 //------------------------------------------
+
 Quiz.prototype.save = function(_this) {
   console.log("Saving..." + " " + _this.name);
   var storageData = getStorageData("quiz_data");
@@ -92,8 +105,11 @@ Quiz.prototype.save = function(_this) {
     }
   };
 }
+
+//------------------------------------------
 // APPEND SAVED SESSIONS
 //------------------------------------------
+
 Quiz.prototype.appendSavedSessions = function() {
   var _this = this;
   var quizData = getStorageData("quiz_data");
@@ -192,8 +208,11 @@ Quiz.prototype.appendSavedSessions = function() {
    */
 
 };
+
+//------------------------------------------
 // RESUME QUIZ
 //------------------------------------------
+
 Quiz.prototype.resume = function(session_data) {
   console.log("Resuming Quiz...");
   this.setDefault(session_data);
@@ -206,8 +225,11 @@ Quiz.prototype.resume = function(session_data) {
   this.timer("start");
   this.activateControls();
 }
+
+//------------------------------------------
 // QUIT QUIZ
 //------------------------------------------
+
 Quiz.prototype.quit = function() {
   this.stop();
   this.timer("stop");
@@ -237,8 +259,10 @@ Quiz.prototype.setDefault = function(session_data) {
   };
 };
 
+//------------------------------------------
 // LOAD LOCAL STORAGE DATA INTO THE QUIZ INSTANCE
 //------------------------------------------
+
 Quiz.prototype.updateQuizData = function() {
   console.log("updating quiz data...");
   // get and parse data
@@ -259,8 +283,10 @@ Quiz.prototype.updateQuizData = function() {
 
 };
 
+//------------------------------------------
 // TIMER
 //------------------------------------------
+
 Quiz.prototype.timer = function(option) {
   var _this = this;
   var time;
@@ -361,8 +387,10 @@ Quiz.prototype.timer = function(option) {
 
 }
 
+//------------------------------------------
 // RENDER QUESTION
 //------------------------------------------
+
 Quiz.prototype.renderQuestion = function(currentQuestion) {
   console.log("Rendering question...");
   var _this = this;
@@ -488,6 +516,10 @@ Quiz.prototype.validateAnswer = function() {
     return false;
   };
 };
+
+//------------------------------------------
+// CHECK ANSWER
+//------------------------------------------
 
 Quiz.prototype.checkAnswer = function() {
   console.log("Checking answer...");
@@ -646,11 +678,11 @@ Quiz.prototype.renderWrongAnswers = function() {
   var wrongAnswersEl = document.querySelector('.wrong-answers');
   var wrongAnswerEl = undefined;
   var correctAnswers = [];
-  var reultsHeading = document.createElement("h2");
+  var resultsHeading = document.createElement("h2");
   var html = "";
   // Append heading
-  reultsHeading = "Wrong Answers";
-  wrongAnswerEl.appendChild(reultsHeading);
+  resultsHeading.innerHTML = "Wrong Answers";
+  wrongAnswersEl.appendChild(resultsHeading);
   // Append every wrong answer
   for (var i = 0; i < this.wrongAnswers.length; i++) {
     wrongAnswerEl = document.createElement('li');
@@ -698,7 +730,11 @@ Quiz.prototype.renderRetakeQuizButton = function() {
     _this.start();
   }
 };
-//append quizzes to the ui
+
+//------------------------------------------
+// APPEND QUIZZES
+//------------------------------------------
+
 Quiz.prototype.append = function(section) {
   var _this = this;
 
@@ -723,6 +759,7 @@ Quiz.prototype.append = function(section) {
   html += "<table>";
   html +=   "<tr><th>Time</th><td>" + this.time + "</td></tr>";
   html +=   "<tr><th>Questions</th><td>" + this.questions.length + "</td></tr>";
+  html +=   "<tr><th>Status</th><td class='quiz-status'>" + this.status + "</td></tr>";
   html += "</table>";
   html += "<p>" + this.description + "</p>";
   html += "<div class='quiz-card_buttons button-group'></buttons>";
@@ -751,7 +788,10 @@ Quiz.prototype.append = function(section) {
 
 };
 
-// Set default storage
+//------------------------------------------
+// SET DEFAULT STORAGE
+//------------------------------------------
+
 Quiz.prototype.setStorage = function() {
   var storage = getStorageData("quiz_data");
   var quiz_data;
@@ -765,3 +805,34 @@ Quiz.prototype.setStorage = function() {
 
   localStorage.setItem("quiz_data", storage);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var dom = function(element) {
+  var element = document.querySelector(element);
+  return
+}
+
+dom(".foo").addClass("bar");

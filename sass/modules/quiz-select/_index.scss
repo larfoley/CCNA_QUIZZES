@@ -5,16 +5,16 @@
 	  padding: 0 0 2em 0;
 	  h2 {
 	    font-size: 1.8em;
-	    margin-bottom: .2em;
+	    margin-bottom: .1em;
 	  }
 	  hr {
-	    width: 10em;
+	    width: 8em;
 	    margin: 0;
 	    border: none;
 	    height: 8px;
 	    background: $color-primary;
-	    
-	  } 
+
+	  }
 	}
 
 	&_card {
@@ -66,6 +66,10 @@
 
 .quiz-passed {
 	border: 5px solid $color-success;
+	.quiz-sttaus {
+		color: $color-success;
+		text-transform: capitalize;
+	}
 }
 
 .quiz-failed {
@@ -85,7 +89,7 @@
 	&-header,
 	&-content,
 	&-footer {
-		
+
 	}
 
 	&-header {
@@ -129,7 +133,7 @@
 		.resumeBtn {
 			text-align: middle;
 			width: 80%;
-			
+
 		}
 		.deleteBtn {
 			color: #ccc;
@@ -182,4 +186,3 @@
 		right: 0;
 	}
 }
-

@@ -7,10 +7,7 @@ window.onload = function() {
     if (storageData[i].status === "passed") {
       document.getElementById(storageData[i].id)
         .className += " quiz-passed";
-
-    } else if (storageData[i].status === "failed") {
-      document.getElementById(storageData[i].id)
-        .className += " quiz-failed";
+        return  false;
     }
 
   };

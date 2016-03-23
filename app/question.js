@@ -254,7 +254,7 @@ var questions = {
 					correct: true
 				},
 			],
-			multiple_choice: false,
+			multiple_choice: true,
 			correct_choices: 3,
 			explanation: "<p>NetFlow traditionally enables several key customer applications including:</p> <p>+ Network Monitoring – NetFlow data enables extensive near real time network monitoring capabilities. Flow-based analysis techniques may be utilized to visualize traffic patterns associated with individual routers and switches as well as on a network-wide basis (providing aggregate traffic or application based views) to provide proactive problem detection, efficient troubleshooting, and rapid problem resolution.</p> <p>+ Application Monitoring and Profiling – NetFlow data enables network managers to gain a detailed, time-based, view of application usage over the network. This information is used to plan, understand new services, and allocate network and application resources (e.g. Web server sizing and VoIP deployment) to responsively meet customer demands.</p> <p>+ User Monitoring and Profiling – NetFlow data enables network engineers to gain detailed understanding of customer/user utilization of network and application resources. This information may then be utilized to efficiently plan and allocate access, backbone and application resources as well as to detect and resolve potential security and policy violations.</p> <p>+ Network Planning – NetFlow can be used to capture data over a long period of time producing the opportunity to track and anticipate network growth and plan upgrades to increase the number of routing devices, ports, or higher- bandwidth interfaces. NetFlow services data optimizes network planning including peering, backbone upgrade planning, and routing policy planning. NetFlow helps to minimize the total cost of network operations while maximizing network performance, capacity, and reliability. NetFlow detects unwanted WAN traffic, validates bandwidth and Quality of Service (QOS) and allows the analysis of new network applications. NetFlow will give you valuable information to reduce the cost of operating your network.</p> <p>+ Security Analysis – NetFlow identifies and classifies DDOS attacks, viruses and worms in real-time. Changes in network behavior indicate anomalies that are clearly demonstrated in NetFlow data. The data is also a valuable forensic tool to understand and replay the history of security incidents.</p> <p>+ Accounting/Billing – NetFlow data provides fine-grained metering (e.g. flow data includes details such as IP addresses, packet and byte counts, timestamps, type-of-service and application ports, etc.) for highly flexible and detailed resource utilization accounting. Service providers may utilize the information for billing based on time-of-day, bandwidth usage, application usage, quality of service, etc. Enterprise customers may utilize the information for departmental charge-back or cost allocation for resource utilization.</p>",
 			imgSrc: ""
@@ -290,7 +290,7 @@ var questions = {
 					correct: false
 				}
 			],
-			multiple_choice: false,
+			multiple_choice: true,
 			correct_choices: 3,
 			explanation: "Each packet that is forwarded within a router or switch is examined for a set of IP packet attributes. These attributes are the IP packet identity or fingerprint of the packet and determine if the packet is unique or similar to other packets...",
 			imgSrc: ""
@@ -323,44 +323,147 @@ var questions = {
 			],
 			multiple_choice: false,
 			correct_choices: 1,
-			explanation: "Flow monitors are the Flexible NetFlow component that is applied to interfaces to perform network traffic monitoring. Flow monitors consist of a record and a cache. You add the record to the flow monitor after you create the flow monitor. The flow monitor cache is automatically created at the time the flow monitor is applied to the first interface. Flow data is collected from the network traffic during the monitoring process based on the key and nonkey fields in the record, which is configured for the flow monitor and stored in the flow monitor cache...",
+			explanation: "Flow monitors are the Flexible NetFlow component that is applied to interfaces to perform network traffic monitoring. Flow monitors consist of a record and a cache. You add the record to the flow monitor after you create the flow monitor. The flow monitor cache is automatically created at the time the flow monitor is applied to the first interface. Flow data is collected from the network traffic during the monitoring process based on the key and nonkey fields in the record, which is configured for the flow monitor and stored in the flow monitor cache.",
 			imgSrc: ""
 		},
 		{
 			question_type: "icnd2",
-			tags: [""],
-			question: "",
+			tags: ["netflow"],
+			question: "What command visualizes the general NetFlow data on the command line?",
 			choices: [
 				{
 					id: "A",
-					choice: "",
+					choice: "show ip flow export",
 					correct: false
 				},
 				{
 					id: "B",
-					choice: "",
+					choice: "show ip flow top-talkers",
 					correct: false
 				},
 				{
 					id: "C",
-					choice: "",
+					choice: "show ip cache flow",
+					correct: true
+				},
+				{
+					id: "D",
+					choice: "show mls sampling",
+					correct: false
+				},
+			],
+			multiple_choice: false,
+			correct_choices: 1,
+			explanation: "The “show ip cache flow” command displays a summary of the NetFlow accounting statistics.",
+			imgSrc: ""
+		},
+		{
+			question_type: "icnd2",
+			tags: ["netflow"],
+			question: "What are three reasons to collect NetFlow data on a company network? (Choose three)",
+			choices: [
+				{
+					id: "A",
+					choice: "To identify applications causing congestion.",
+					correct: true
+				},
+				{
+					id: "B",
+					choice: "To authorize user network access.",
+					correct: false
+				},
+				{
+					id: "C",
+					choice: "To report and alert link up / down instances.",
 					correct: false
 				},
 				{
 					id: "D",
-					choice: "",
-					correct: false
+					choice: "To diagnose slow network performance, bandwidth hogs, and bandwidth utilization.",
+					correct: true
 				},
 				{
 					id: "E",
-					choice: "",
+					choice: "To detect suboptimal routing in the network.",
 					correct: false
 				},
 				{
 					id: "F",
-					choice: "",
+					choice: "To confirm the appropriate amount of bandwidth that has been allocated to each Class of Service.",
+					correct: true
+				}
+			],
+			multiple_choice: true,
+			correct_choices: 3,
+			explanation: "<a href='http://www.cisco.com/c/en/us/products/collateral/ios-nx-os-software/ios-netflow/prod_white_paper0900aecd80406232.html' alt='cisco'>Link</a>",
+			imgSrc: ""
+		},
+		{
+			question_type: "icnd2",
+			tags: ["netflow"],
+			question: "What are three factors a network administrator must consider before implementing Netflow in the network? (Choose three)",
+			choices: [
+				{
+					id: "A",
+					choice: "CPU utilization",
+					correct: true
+				},
+				{
+					id: "B",
+					choice: "where Netflow data will be sent",
+					correct: true
+				},
+				{
+					id: "C",
+					choice: "number of devices exporting Netflow data",
+					correct: true
+				},
+				{
+					id: "D",
+					choice: "port availability",
+					correct: false
+				},
+				{
+					id: "E",
+					choice: "SNMP version",
+					correct: false
+				},
+				{
+					id: "F",
+					choice: "WAN encapsulation",
 					correct: false
 				}
+			],
+			multiple_choice: true,
+			correct_choices: 3,
+			explanation: "",
+			imgSrc: ""
+		},
+		{
+			question_type: "icnd2",
+			tags: ["netflow"],
+			question: "What Cisco IOS feature can be enabled to pinpoint an application that is causing slow network performance?",
+			choices: [
+				{
+					id: "A",
+					choice: "SNMP",
+					correct: false
+				},
+				{
+					id: "B",
+					choice: "Netflow",
+					correct: true
+				},
+				{
+					id: "C",
+					choice: "WCCP",
+					correct: false
+				},
+				{
+					id: "D",
+					choice: "IP SLA",
+					correct: false
+				},
 			],
 			multiple_choice: false,
 			correct_choices: 1,
@@ -369,330 +472,177 @@ var questions = {
 		},
 		{
 			question_type: "icnd2",
-			tags: [""],
-			question: "",
+			tags: ["wan"],
+			question: "Which two statements about using the CHAP authentication mechanism in a PPP link are true? (Choose two)",
 			choices: [
 				{
 					id: "A",
-					choice: "",
+					choice: "CHAP uses a two-way handshake.",
 					correct: false
 				},
 				{
 					id: "B",
-					choice: "",
-					correct: false
+					choice: "CHAP uses a three-way handshake.",
+					correct: true
 				},
 				{
 					id: "C",
-					choice: "",
-					correct: false
+					choice: "CHAP authentication periodically occurs after link establishment.",
+					correct: true
 				},
 				{
 					id: "D",
-					choice: "",
+					choice: " CHAP authentication passwords are sent in plaintext.",
 					correct: false
 				},
 				{
 					id: "E",
-					choice: "",
+					choice: "CHAP authentication is performed only upon link establishment.",
 					correct: false
 				},
 				{
 					id: "F",
-					choice: "",
+					choice: "CHAP has no protection from playback attacks.",
 					correct: false
 				}
 			],
-			multiple_choice: false,
-			correct_choices: 1,
-			explanation: "",
+			multiple_choice: true,
+			correct_choices: 2,
+			explanation: "Point-to-Point Protocol (PPP) can use either Password Authentication Protocol (PAP) or Challenge Handshake Authentication Protocol (CHAP) for authentication. CHAP is used upon initial link establishment and periodically to make sure that the router is still communicating with the same host. CHAP passwords arc exchanged as message digest algorithm 5 (MD5) hash values.",
 			imgSrc: ""
 		},
 		{
 			question_type: "icnd2",
-			tags: [""],
-			question: "",
+			tags: ["wan"],
+			question: "Refer to the exhibit. Hosts in network 192.168.2.0 are unable to reach hosts in network 192.168.3.0. Based on the output from RouterA, what are two possible reasons for the failure? (Choose two)",
 			choices: [
 				{
 					id: "A",
-					choice: "",
+					choice: "The cable that is connected to S0/0 on RouterA is faulty.",
 					correct: false
 				},
 				{
 					id: "B",
-					choice: "",
+					choice: "Interface S0/0 on RouterB is administratively down.",
 					correct: false
 				},
 				{
 					id: "C",
-					choice: "",
+					choice: "Interface S0/0 on RouterA is configured with an incorrect subnet mask.",
 					correct: false
 				},
 				{
 					id: "D",
-					choice: "",
+					choice: "The IP address that is configured on S0/0 of RouterB is not in the correct subnet.",
 					correct: false
 				},
 				{
 					id: "E",
-					choice: "",
-					correct: false
+					choice: "Interface S0/0 on RouterA is not receiving a clock signal from the CSU/DSU.",
+					correct: true
 				},
 				{
 					id: "F",
-					choice: "",
+					choice: "The encapsulation that is configured on S0/0 of RouterB does not match the encapsulation that is configured on S0/0 of RouterA.",
+					correct: true
+				}
+			],
+			multiple_choice: true,
+			correct_choices: 2,
+			explanation: "From the output we see the Serial0/0 of RouterA is in “status up/protocol down” state which indicates a Layer 2 problem so the problem can be:<br>+ Keepalives mismatch<br>+ Encapsulation mismatch<br>+ Clocking problem",
+			imgSrc: "http://www.9tut.net/images/ICND2/Basic_Questions/show_ip_interface_brief_functional.jpg"
+		},
+		{
+			question_type: "icnd2",
+			tags: ["wan"],
+			question: "Which command is used to enable CHAP authentication with PAP as the fallback method on a serial interface?",
+			choices: [
+				{
+					id: "A",
+					choice: "(config-if)# authentication ppp chap fallback ppp",
+					correct: false
+				},
+				{
+					id: "B",
+					choice: "(config-if)# authentication ppp chap pap",
+					correct: false
+				},
+				{
+					id: "C",
+					choice: "(config-if)# ppp authentication chap pap",
+					correct: true
+				},
+				{
+					id: "D",
+					choice: "(config-if)# ppp authentication chap fallback ppp",
 					correct: false
 				}
 			],
 			multiple_choice: false,
 			correct_choices: 1,
-			explanation: "",
+			explanation: "The command “ppp authentication chap pap” command indicates the CHAP authentication is used first. If it fails or is rejected by other side then uses PAP instead. If you want to use PAP first (then CHAP) you can use the “ppp authentication pap chap” command.",
 			imgSrc: ""
 		},
 		{
 			question_type: "icnd2",
-			tags: [""],
-			question: "",
+			tags: ["wan"],
+			question: "Which Layer 2 protocol encapsulation type supports synchronous and asynchronous circuits and has built-in security mechanisms?",
 			choices: [
 				{
 					id: "A",
-					choice: "",
+					choice: "HDLC ",
 					correct: false
 				},
 				{
 					id: "B",
-					choice: "",
-					correct: false
+					choice: "PPP",
+					correct: true
 				},
 				{
 					id: "C",
-					choice: "",
+					choice: "X.25",
 					correct: false
 				},
 				{
 					id: "D",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "E",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "F",
-					choice: "",
+					choice: "Frame Relay",
 					correct: false
 				}
 			],
 			multiple_choice: false,
 			correct_choices: 1,
-			explanation: "",
+			explanation: "PPP supports both synchronous (like analog phone lines) and asynchronous circuits (such as ISDN or digital links). With synchronous circuits we need to use clock rate.",
 			imgSrc: ""
 		},
 		{
 			question_type: "icnd2",
-			tags: [""],
-			question: "",
+			tags: ["wan"],
+			question: "At which layer of the OSI model does PPP perform?",
 			choices: [
 				{
 					id: "A",
-					choice: "",
-					correct: false
+					choice: "Layer 2",
+					correct: true
 				},
 				{
 					id: "B",
-					choice: "",
+					choice: "Layer 3",
 					correct: false
 				},
 				{
 					id: "C",
-					choice: "",
+					choice: "Layer 4",
 					correct: false
 				},
 				{
 					id: "D",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "E",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "F",
-					choice: "",
+					choice: "Layer 5",
 					correct: false
 				}
 			],
 			multiple_choice: false,
 			correct_choices: 1,
-			explanation: "",
-			imgSrc: ""
-		},
-		{
-			question_type: "icnd2",
-			tags: [""],
-			question: "",
-			choices: [
-				{
-					id: "A",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "B",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "C",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "D",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "E",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "F",
-					choice: "",
-					correct: false
-				}
-			],
-			multiple_choice: false,
-			correct_choices: 1,
-			explanation: "",
-			imgSrc: ""
-		},
-		{
-			question_type: "icnd2",
-			tags: [""],
-			question: "",
-			choices: [
-				{
-					id: "A",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "B",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "C",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "D",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "E",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "F",
-					choice: "",
-					correct: false
-				}
-			],
-			multiple_choice: false,
-			correct_choices: 1,
-			explanation: "",
-			imgSrc: ""
-		},
-		{
-			question_type: "icnd2",
-			tags: [""],
-			question: "",
-			choices: [
-				{
-					id: "A",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "B",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "C",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "D",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "E",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "F",
-					choice: "",
-					correct: false
-				}
-			],
-			multiple_choice: false,
-			correct_choices: 1,
-			explanation: "",
-			imgSrc: ""
-		},
-		{
-			question_type: "icnd2",
-			tags: [""],
-			question: "",
-			choices: [
-				{
-					id: "A",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "B",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "C",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "D",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "E",
-					choice: "",
-					correct: false
-				},
-				{
-					id: "F",
-					choice: "",
-					correct: false
-				}
-			],
-			multiple_choice: false,
-			correct_choices: 1,
-			explanation: "",
+			explanation: "Layer 2 includes the popular WAN standards, such as the Point-to-Point Protocol (PPP), High-Level Data-Link Control (HDLC) and Frame Relay protocols.",
 			imgSrc: ""
 		}
 		/*{

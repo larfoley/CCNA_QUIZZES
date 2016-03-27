@@ -1,6 +1,9 @@
 
 .results {
 	padding: 3em 0;
+	h2 {
+		color: white;
+	}
 }
 
 .result {
@@ -48,10 +51,13 @@
 .wrong-answer {
 	margin-bottom: 1em;
 	background: white;
-	box-shadow: 0 3px 3px #ccc;
+	//box-shadow: 0 3px 3px #ccc;
 	border-radius: 5px;
 	padding: 2em;
 	list-style: none;
+	h3 {
+		color: black;
+	}
 	li {
 		list-style: upper-alpha;
 	}

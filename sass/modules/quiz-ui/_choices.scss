@@ -15,14 +15,14 @@
   	left: -10000px;
   }
   &-input:hover + label, &:checked + label {
-    box-shadow: 0 6px 6px #ccc;
+    //box-shadow: 0 6px 6px #ccc;
   }
   &-input:checked + label {
     //border: 1px solid black;
-    box-shadow: 0 1px 1px #ccc;
+    //box-shadow: 0 1px 1px #ccc;
   }
   &-input:active + label, &:checked + label {
-    box-shadow: 0 1px 1px #ccc;
+    //box-shadow: 0 1px 1px #ccc;
   }
   &-input:checked + label .choice-id div {
     background: $color-primary;
@@ -36,7 +36,7 @@
     position: relative;
     padding: 1em;
     background: white;
-    box-shadow: 0 3px 3px #ccc;
+    //box-shadow: 0 3px 3px #ccc;
     border-radius: 5px;
     &:hover {cursor: pointer;}
     //add a cleafix mixin and
@@ -78,7 +78,7 @@
       color: black;
     }
   }
-  &.incorrect { 
+  &.incorrect {
     .choice-wrapper {
       color: white;
       background: $color-failure;

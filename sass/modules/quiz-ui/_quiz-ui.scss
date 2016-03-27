@@ -1,7 +1,7 @@
 //.quiz-ui {}
 .quiz-ui_header {
   padding: 2em 0;
-  background: white;
+  background: $bright-gray;
 }
 
 .quiz-menu {
@@ -83,7 +83,7 @@
     //padding: .5em 1em;
   }
   #save:active {
-    
+
   }
   @media screen and (min-width: 700px) {
     text-align: right;

@@ -1,8 +1,9 @@
 .question {
   padding: 2em ;
   background: white;
+
   margin: 2em 0;
-  box-shadow: 0 3px 3px #ccc;
+  //box-shadow: 0 3px 3px #ccc;
   border-radius: 5px;
   line-height: 1.5;
   &-img {
@@ -12,6 +13,7 @@
   &-num {
   	text-transform: uppercase;
   	margin-bottom: .7em;
+    color: black;
   }
 
   &-text {

@@ -6,6 +6,7 @@
 	  h2 {
 	    font-size: 1.8em;
 	    margin-bottom: .1em;
+			color: white;
 	  }
 	  hr {
 	    width: 8em;
@@ -18,7 +19,8 @@
 	}
 
 	&_card {
-	  box-shadow: 0 3px 3px #ccc;
+	  //box-shadow: 0 3px 3px #ccc;
+		// box-shadow: %box;
 	  border-radius: 5px;
 	  padding: 1.5em;
 	  width: 100%;
@@ -33,12 +35,15 @@
 	  	}
 	  }
 	  @media screen and (min-width: 900px) {
-    	width: 31%;
+    	width: 31.333333333333332%;
     	margin-right: 3%;
-    	&:last-child {
+    	&:nth-child(3) {
     		margin-right: 0;
     	}
   	}
+		.tag-select {
+			margin: .5em 0;
+		}
 	  h2 {
 	    color: black;
 	    margin-top: 0;
@@ -95,7 +100,11 @@
 	&-header {
 		border-bottom: 1px solid #ccc;
 		padding: 1em;
-		h2 {margin:0};
+
+		h2 {
+			margin: 0;
+			color: white;
+		}
 	}
 
 	&-content {
